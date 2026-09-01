@@ -41,7 +41,7 @@
     <h1 data-hero="title">Harbourside</h1>
     <p class="hero__lede" data-hero="lede">A new landmark waterfront destination for business events, celebrations and weddings, at the centre of Darling Harbour.</p>
     <div class="hero__actions" data-hero="actions">
-      <a class="btn btn--gold" href="#enquire">Enquire Now</a>
+      <a class="btn btn--gold" id="heroCta" href="#enquire">Enquire Now</a>
       <a class="btn btn--ghost" href="#spaces">Explore the Spaces ↓</a>
     </div>
   </div>
@@ -64,8 +64,8 @@
     <span class="label">Planning:</span>
     <div class="seg" id="eventTypeSeg" role="group" aria-label="Event type">
       <button class="is-active" data-event-type="business" aria-pressed="true">Business Events</button>
-      <button data-event-type="celebrations" aria-pressed="false">Celebrations</button>
       <button data-event-type="weddings" aria-pressed="false">Weddings</button>
+      <button data-event-type="celebrations" aria-pressed="false">Celebrations</button>
     </div>
   </div>
 </nav>
@@ -74,8 +74,8 @@
 <section class="venue section" id="overview">
   <div>
     <p class="overline" data-reveal>The Venue</p>
-    <h2 data-split>Where the water meets the city, a new stage for Sydney&rsquo;s most considered events.</h2>
-    <p data-reveal>Positioned on the waterfront at the centre of Darling Harbour&rsquo;s convention and tourism precinct, Harbourside brings together six purpose-built spaces, a landscaped rooftop garden and more than 55 years of Doltone House event delivery.</p>
+    <h2 id="overviewHead" data-split>Where the water meets the city, a new stage for Sydney&rsquo;s most considered events.</h2>
+    <p id="overviewIntro" data-reveal>Positioned on the waterfront at the centre of Darling Harbour&rsquo;s convention and tourism precinct, Harbourside brings together six purpose-built spaces, a landscaped rooftop garden and more than 55 years of Doltone House event delivery.</p>
   </div>
   <ul class="stats" data-reveal-group>
     <li class="stat">
@@ -306,11 +306,11 @@
   <div class="enquire__grid">
     <div>
       <p class="overline" data-reveal>Book or Enquire</p>
-      <h2 data-split>Plan your event at Harbourside.</h2>
-      <p class="enquire__lede" data-reveal>Tell us about your event and our team will come back to you with availability, options and a considered recommendation.</p>
+      <h2 id="enquireHead" data-split>Plan your event at Harbourside.</h2>
+      <p class="enquire__lede" id="enquireSub" data-reveal>Tell us about your event and our team will come back to you with availability, options and a considered recommendation.</p>
       <div class="enquire__actions" data-reveal>
-        <a class="btn btn--gold" href="#enquire">Enquire Now</a>
-        <a class="btn btn--ghost" href="#">Book a Venue Tour</a>
+        <a class="btn btn--gold" id="enquireCta" href="#enquire">Enquire Now</a>
+        <a class="btn btn--ghost" id="enquireCta2" href="#">Book a Venue Tour</a>
       </div>
     </div>
     <form class="enquiry-form" data-reveal onsubmit="return false;">
@@ -322,8 +322,8 @@
         <span class="k">Event Type</span>
         <div class="chip-row" id="formEventType">
           <button type="button" class="is-active" data-event-type="business" aria-pressed="true">Business Event</button>
-          <button type="button" data-event-type="celebrations" aria-pressed="false">Celebration</button>
           <button type="button" data-event-type="weddings" aria-pressed="false">Wedding</button>
+          <button type="button" data-event-type="celebrations" aria-pressed="false">Celebration</button>
         </div>
       </div>
       <div class="field">

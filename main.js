@@ -98,31 +98,56 @@
     lyra:  { desc: "Named after the Lyra constellation — an elegant pre-function space designed as the heart of arrival and connection." }
   };
 
-  /* Event-type re-theming (lens section) */
-  const LENS = {
+  /* Event-type copy variants — business is the built design copy;
+     weddings & celebrations carry the supplied copy deck. */
+  const VARIANTS = {
     business: {
-      title: "Seen through the lens of business events.",
-      cards: [
+      heroLede: "A new landmark waterfront destination for business events, celebrations and weddings, at the centre of Darling Harbour.",
+      heroCta: "Enquire Now",
+      overviewHead: "Where the water meets the city, a new stage for Sydney\u2019s most considered events.",
+      overviewIntro: "Positioned on the waterfront at the centre of Darling Harbour\u2019s convention and tourism precinct, Harbourside brings together six purpose-built spaces, a landscaped rooftop garden and more than 55 years of Doltone House event delivery.",
+      lensTitle: "Seen through the lens of business events.",
+      lensCards: [
         { t: "Conferences & keynotes", d: "Plenary in Horizon, breakouts across Sol and Cove, delegate arrival through Lyra." },
-        { t: "Gala dinners & awards", d: "Evening arrivals over the water, pre-dinner drinks in Lyra, dinner beneath Horizon's full scale." },
+        { t: "Gala dinners & awards", d: "Evening arrivals over the water, pre-dinner drinks in Lyra, dinner beneath Horizon\u2019s full scale." },
         { t: "Exhibitions & launches", d: "Flexible floorplates, production access and networking that spills onto the rooftop garden." }
-      ]
-    },
-    celebrations: {
-      title: "Seen through the lens of celebrations.",
-      cards: [
-        { t: "Milestones & anniversaries", d: "Long lunches in Sol, sunset drinks in Lyra, dinner and dancing beneath Horizon." },
-        { t: "Cultural celebrations", d: "Connected spaces and adaptable staging shaped around tradition, family and scale." },
-        { t: "Cocktail celebrations", d: "Evening receptions in Lume that spill onto the rooftop garden as the harbour lights up." }
-      ]
+      ],
+      enquireHead: "Plan your event at Harbourside.",
+      enquireSub: "Tell us about your event and our team will come back to you with availability, options and a considered recommendation.",
+      enquireCta: "Enquire Now",
+      enquireCta2: "Book a Venue Tour"
     },
     weddings: {
-      title: "Seen through the lens of weddings.",
-      cards: [
-        { t: "Ceremonies on the water", d: "Vows against the harbour in Azure or Eloura Park, with guest arrival through Lyra." },
-        { t: "Grand receptions", d: "Dinner and dancing beneath Horizon's full scale, framed by sweeping waterfront views." },
-        { t: "Pre-wedding gatherings", d: "Intimate dinners and welcome drinks across Cove and Sol in the days before." }
-      ]
+      heroLede: "A waterfront setting for a wedding shaped entirely around the two of you.",
+      heroCta: "Plan Your Wedding",
+      overviewHead: "A day of your own, on the water.",
+      overviewIntro: "Opening in 2027 on the Darling Harbour waterfront, Harbourside pairs a landmark setting with more than 55 years of Doltone House wedding experience. From first arrival to last dance, every detail is planned with you \u2014 the setting, the styling, the food and the flow of the day.",
+      lensTitle: "Your wedding at Harbourside.",
+      lensCards: [
+        { t: "The arrival", d: "Guests welcomed off the waterfront promenade as the harbour turns gold." },
+        { t: "Dining & speeches", d: "Long tables, considered styling and food that becomes part of the story." },
+        { t: "The dance floor", d: "Speeches give way to the first dance and a room that stays up late." }
+      ],
+      enquireHead: "Plan your wedding at Harbourside.",
+      enquireSub: "Tell us about your day and a Doltone House wedding specialist will be in touch.",
+      enquireCta: "Plan Your Wedding",
+      enquireCta2: "Book a Venue Tour"
+    },
+    celebrations: {
+      heroLede: "A waterfront venue for birthdays, engagements and the milestones in between.",
+      heroCta: "Plan Your Celebration",
+      overviewHead: "Occasions worth gathering for.",
+      overviewIntro: "Opening in 2027 on the Darling Harbour waterfront, Harbourside offers flexible spaces for celebrations of every scale \u2014 from intimate dinners to milestone parties \u2014 backed by more than 55 years of Doltone House hospitality, food and service.",
+      lensTitle: "Your celebration at Harbourside.",
+      lensCards: [
+        { t: "Birthdays & milestones", d: "Rooms that scale from an intimate dinner to a full-floor party." },
+        { t: "Engagements", d: "A waterfront backdrop for the first celebration of many." },
+        { t: "Dinner to dancing", d: "The night moves naturally from dining to speeches, entertainment and dancing." }
+      ],
+      enquireHead: "Plan your celebration at Harbourside.",
+      enquireSub: "Tell us about the occasion and a Doltone House event planner will be in touch.",
+      enquireCta: "Plan Your Celebration",
+      enquireCta2: "Check Your Preferred Date"
     }
   };
   const EVENT_LABELS = { business: "Business Event", celebrations: "Celebration", weddings: "Wedding" };
@@ -373,19 +398,37 @@
      ========================================================== */
   const lensTitle = document.getElementById("lensTitle");
   const lensCards = document.getElementById("lensCards");
+  const variantEls = {
+    heroLede: document.querySelector('[data-hero="lede"]'),
+    heroCta: document.getElementById("heroCta"),
+    overviewHead: document.getElementById("overviewHead"),
+    overviewIntro: document.getElementById("overviewIntro"),
+    enquireHead: document.getElementById("enquireHead"),
+    enquireSub: document.getElementById("enquireSub"),
+    enquireCta: document.getElementById("enquireCta"),
+    enquireCta2: document.getElementById("enquireCta2")
+  };
 
   function setEventType(type, opts = {}) {
-    if (!LENS[type] || type === currentEventType) { markEventTypeUI(type); return; }
+    if (!VARIANTS[type] || type === currentEventType) { markEventTypeUI(type); return; }
     currentEventType = type;
     markEventTypeUI(type);
+    const V = VARIANTS[type];
 
-    // re-theme lens section
     const apply = () => {
-      lensTitle.textContent = LENS[type].title;
+      variantEls.heroLede.textContent = V.heroLede;
+      variantEls.heroCta.textContent = V.heroCta;
+      variantEls.overviewHead.textContent = V.overviewHead;
+      variantEls.overviewIntro.textContent = V.overviewIntro;
+      lensTitle.textContent = V.lensTitle;
       lensCards.querySelectorAll(".lens-card").forEach((card, i) => {
-        card.querySelector("[data-lens-title]").textContent = LENS[type].cards[i].t;
-        card.querySelector("[data-lens-desc]").textContent = LENS[type].cards[i].d;
+        card.querySelector("[data-lens-title]").textContent = V.lensCards[i].t;
+        card.querySelector("[data-lens-desc]").textContent = V.lensCards[i].d;
       });
+      variantEls.enquireHead.textContent = V.enquireHead;
+      variantEls.enquireSub.textContent = V.enquireSub;
+      variantEls.enquireCta.textContent = V.enquireCta;
+      variantEls.enquireCta2.textContent = V.enquireCta2;
       // re-theme space cards' use-case lines (selection untouched)
       grid.querySelectorAll(".space-card").forEach(card => {
         const tags = card.querySelector("[data-space-tags]");
@@ -393,10 +436,18 @@
       });
     };
 
+    const swapNodes = [
+      variantEls.heroLede, variantEls.heroCta,
+      variantEls.overviewHead, variantEls.overviewIntro,
+      lensTitle, lensCards,
+      variantEls.enquireHead, variantEls.enquireSub,
+      variantEls.enquireCta, variantEls.enquireCta2
+    ];
+
     if (reduceMotion || !hasGsap || opts.instant) { apply(); return; }
-    gsap.to([lensTitle, lensCards], { opacity: 0, y: 8, duration: 0.22, ease: "power2.in", onComplete() {
+    gsap.to(swapNodes, { opacity: 0, y: 8, duration: 0.22, ease: "power2.in", onComplete() {
       apply();
-      gsap.to([lensTitle, lensCards], { opacity: 1, y: 0, duration: 0.4, ease: "power2.out", clearProps: "opacity,transform" });
+      gsap.to(swapNodes, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out", clearProps: "opacity,transform" });
     }});
   }
 
