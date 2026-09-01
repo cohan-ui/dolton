@@ -110,9 +110,9 @@
       overviewIntro: "Positioned on the waterfront at the centre of Darling Harbour\u2019s convention and tourism precinct, Harbourside brings together six purpose-built spaces, a landscaped rooftop garden and more than 55 years of Doltone House event delivery.",
       lensTitle: "Seen through the lens of business events.",
       lensCards: [
-        { t: "Conferences & keynotes", d: "Plenary in Horizon, breakouts across Sol and Cove, delegate arrival through Lyra." },
-        { t: "Gala dinners & awards", d: "Evening arrivals over the water, pre-dinner drinks in Lyra, dinner beneath Horizon\u2019s full scale." },
-        { t: "Exhibitions & launches", d: "Flexible floorplates, production access and networking that spills onto the rooftop garden." }
+        { img: "assets/img/lens-conference.jpg", alt: "Conference plenary in the Horizon space", t: "Conferences & keynotes", d: "Plenary in Horizon, breakouts across Sol and Cove, delegate arrival through Lyra." },
+        { img: "assets/img/lens-gala.jpg", alt: "Gala dinner beneath the Horizon ceiling", t: "Gala dinners & awards", d: "Evening arrivals over the water, pre-dinner drinks in Lyra, dinner beneath Horizon\u2019s full scale." },
+        { img: "assets/img/lens-exhibition.jpg", alt: "Product launch on the rooftop garden", t: "Exhibitions & launches", d: "Flexible floorplates, production access and networking that spills onto the rooftop garden." }
       ],
       enquireHead: "Plan your event at Harbourside.",
       enquireSub: "Tell us about your event and our team will come back to you with availability, options and a considered recommendation.",
@@ -128,9 +128,9 @@
       overviewIntro: "Opening in 2027 on the Darling Harbour waterfront, Harbourside pairs a landmark setting with more than 55 years of Doltone House wedding experience. From first arrival to last dance, every detail is planned with you \u2014 the setting, the styling, the food and the flow of the day.",
       lensTitle: "Your wedding at Harbourside.",
       lensCards: [
-        { t: "The arrival", d: "Guests welcomed off the waterfront promenade as the harbour turns gold." },
-        { t: "Dining & speeches", d: "Long tables, considered styling and food that becomes part of the story." },
-        { t: "The dance floor", d: "Speeches give way to the first dance and a room that stays up late." }
+        { img: "assets/img/lens-wedding-arrival.jpg", alt: "A couple leaving through applauding guests and falling petals at the venue entrance", t: "The arrival", d: "Guests welcomed off the waterfront promenade as the harbour turns gold." },
+        { img: "assets/img/lens-wedding-dining.jpg", alt: "Wedding speeches at golden hour with the harbour behind", t: "Dining & speeches", d: "Long tables, considered styling and food that becomes part of the story." },
+        { img: "assets/img/lens-wedding-dance.jpg", alt: "The couple\u2019s first dance under the timber ceiling at night", t: "The dance floor", d: "Speeches give way to the first dance and a room that stays up late." }
       ],
       enquireHead: "Plan your wedding at Harbourside.",
       enquireSub: "Tell us about your day and a Doltone House wedding specialist will be in touch.",
@@ -146,9 +146,9 @@
       overviewIntro: "Opening in 2027 on the Darling Harbour waterfront, Harbourside offers flexible spaces for celebrations of every scale \u2014 from intimate dinners to milestone parties \u2014 backed by more than 55 years of Doltone House hospitality, food and service.",
       lensTitle: "Your celebration at Harbourside.",
       lensCards: [
-        { t: "Birthdays & milestones", d: "Rooms that scale from an intimate dinner to a full-floor party." },
-        { t: "Engagements", d: "A waterfront backdrop for the first celebration of many." },
-        { t: "Dinner to dancing", d: "The night moves naturally from dining to speeches, entertainment and dancing." }
+        { img: "assets/img/lens-conference.jpg", alt: "A milestone dinner in the Horizon space", t: "Birthdays & milestones", d: "Rooms that scale from an intimate dinner to a full-floor party." },
+        { img: "assets/img/lens-gala.jpg", alt: "An engagement celebration over the water", t: "Engagements", d: "A waterfront backdrop for the first celebration of many." },
+        { img: "assets/img/lens-exhibition.jpg", alt: "Evening celebration spilling onto the rooftop garden", t: "Dinner to dancing", d: "The night moves naturally from dining to speeches, entertainment and dancing." }
       ],
       enquireHead: "Plan your celebration at Harbourside.",
       enquireSub: "Tell us about the occasion and a Doltone House event planner will be in touch.",
@@ -435,6 +435,11 @@
       variantEls.overviewIntro.textContent = V.overviewIntro;
       lensTitle.textContent = V.lensTitle;
       lensCards.querySelectorAll(".lens-card").forEach((card, i) => {
+        const img = card.querySelector("[data-lens-img]");
+        if (img.getAttribute("src") !== V.lensCards[i].img) {
+          img.src = V.lensCards[i].img;
+          img.alt = V.lensCards[i].alt;
+        }
         card.querySelector("[data-lens-title]").textContent = V.lensCards[i].t;
         card.querySelector("[data-lens-desc]").textContent = V.lensCards[i].d;
       });
