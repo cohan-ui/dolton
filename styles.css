@@ -136,12 +136,12 @@ a:focus-visible, button:focus-visible {
 .site-header.is-hidden { transform: translateY(-100%); }
 
 .header-left { display: flex; align-items: center; gap: 32px; }
-.menu-toggle { display: flex; align-items: center; gap: 10px; color: var(--cream-3); font-size: 13px; letter-spacing: 2.6px; }
+.menu-toggle { display: flex; align-items: center; gap: 10px; color: var(--cream-3); font-size: 13px; letter-spacing: 2.6px; text-transform: uppercase; }
 .menu-toggle .lines { display: flex; flex-direction: column; gap: 4px; }
 .menu-toggle .lines span { display: block; width: 20px; height: 1px; background: var(--cream-3); transition: transform .3s var(--ease-out), width .3s var(--ease-out); }
 .menu-toggle:hover .lines span:first-child { width: 14px; }
 
-.venue-select { font-family: var(--narrow); font-size: 13px; letter-spacing: 2.6px; color: var(--muted); transition: color .3s; }
+.venue-select { text-transform: uppercase; font-family: var(--narrow); font-size: 13px; letter-spacing: 2.6px; color: var(--muted); transition: color .3s; }
 .venue-select:hover { color: var(--cream-3); }
 
 .header-logo img {
@@ -153,6 +153,7 @@ a:focus-visible, button:focus-visible {
 
 .header-right { display: flex; justify-content: flex-end; }
 .header-cta {
+  text-transform: uppercase;
   border: 1px solid var(--gold);
   color: var(--gold);
   font-size: 13px;

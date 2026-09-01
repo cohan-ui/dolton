@@ -451,7 +451,7 @@
 
     const swapNodes = [
       ...(heroChanging ? [heroEl] : []),
-      variantEls.heroLede, variantEls.heroCta,
+      variantEls.heroLede, ...document.querySelectorAll('[data-hero="actions"] .btn'),
       variantEls.overviewHead, variantEls.overviewIntro,
       lensTitle, lensCards,
       variantEls.enquireHead, variantEls.enquireSub,
@@ -618,7 +618,7 @@
     heroTl
       .from(".hero__media img", { scale: 1.12, duration: 1.6, ease: "power2.out" }, 0)
       .from('[data-hero="eyebrow"] .rule', { scaleX: 0, duration: 0.9 }, 0.35)
-      .from('[data-hero="eyebrow"] span:last-child', { opacity: 0, y: 14, duration: 0.8 }, 0.45);
+      .from('[data-hero="eyebrow"] span:last-child', { opacity: 0, y: 14, duration: 0.8, clearProps: "opacity,transform" }, 0.45);
 
     const h1 = document.querySelector('[data-hero="title"]');
     if (hasSplit) {
@@ -629,8 +629,8 @@
       heroTl.from(h1, { opacity: 0, y: 40, duration: 1 }, 0.55);
     }
     heroTl
-      .from('[data-hero="lede"]', { opacity: 0, y: 24, duration: 0.9 }, 0.95)
-      .from('[data-hero="actions"] .btn', { opacity: 0, y: 20, duration: 0.7, stagger: 0.1 }, 1.1)
+      .from('[data-hero="lede"]', { opacity: 0, y: 24, duration: 0.9, clearProps: "opacity,transform" }, 0.95)
+      .from('[data-hero="actions"] .btn', { opacity: 0, y: 20, duration: 0.7, stagger: 0.1, clearProps: "opacity,transform" }, 1.1)
       .from(".hero__video-ctl", { opacity: 0, duration: 0.8 }, 1.3);
 
     /* --- headline line reveals --- */
