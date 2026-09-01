@@ -686,8 +686,6 @@ a:focus-visible, button:focus-visible {
 }
 .diff-list .t { font-family: var(--serif); font-size: 22px; color: var(--gold); padding-bottom: 4px; }
 .diff-list .d { font-size: 15.5px; line-height: 25.58px; color: var(--muted); max-width: 458px; }
-.difference__mark { margin-top: 56px; height: 72px; opacity: .8; display: flex; gap: 2px; }
-.difference__mark img { height: 100%; width: auto; }
 
 /* ============================================================
    LENS — Your event at Harbourside
