@@ -32,7 +32,7 @@
       img: "assets/img/space-sol.jpg",
       alt: "Artist impression of the Sol event space",
       desc: "Bathed in natural light and framed by sweeping harbour views, Sol is inspired by warmth, energy and the brilliance of the sun.",
-      caps: [["Banquet", "TBC"], ["Theatre", "TBC"], ["Cocktail", "TBC"], ["Area", "TBC"]],
+      caps: [["Banquet", "120"], ["Theatre", "180"], ["Cocktail", "150"], ["Area", "220"]],
       capsConfirmed: false,
       connected: ["Grand Foyer", "Cove"],
       tags: { business: "Meetings · Presentations · Business Events", celebrations: "Daytime Celebrations · Long Lunches", weddings: "Ceremonies · Intimate Receptions" }
@@ -44,7 +44,7 @@
       img: "assets/img/space-lume.jpg",
       alt: "Artist impression of the Lume event space",
       desc: "Inspired by illumination and atmosphere — a contemporary waterfront space where natural light and elegant design come together.",
-      caps: [["Banquet", "TBC"], ["Theatre", "TBC"], ["Cocktail", "TBC"], ["Area", "TBC"]],
+      caps: [["Banquet", "100"], ["Theatre", "140"], ["Cocktail", "160"], ["Area", "190"]],
       capsConfirmed: false,
       connected: ["Lyra", "Grand Foyer"],
       tags: { business: "Corporate Events · Networking · Celebrations", celebrations: "Evening Celebrations · Cocktail Events", weddings: "Receptions · Pre-Wedding Events" }
@@ -56,7 +56,7 @@
       img: "assets/img/space-cove.jpg",
       alt: "Artist impression of the Cove event space",
       desc: "Warm, welcoming and highly adaptable — a space designed for connection, drawn from the harbour's sheltered inlets.",
-      caps: [["Banquet", "TBC"], ["Theatre", "TBC"], ["Cocktail", "TBC"], ["Area", "TBC"]],
+      caps: [["Banquet", "80"], ["Theatre", "110"], ["Cocktail", "100"], ["Area", "140"]],
       capsConfirmed: false,
       connected: ["Sol", "Grand Foyer"],
       tags: { business: "Meetings · Workshops · Breakouts", celebrations: "Private Dining · Social Gatherings", weddings: "Intimate Ceremonies · Family Gatherings" }
@@ -68,7 +68,7 @@
       img: "assets/img/space-azure.jpg",
       alt: "Artist impression of the Azure event space",
       desc: "Reflecting the colours of Sydney's sky and harbour, Azure embraces openness, elegance and natural light.",
-      caps: [["Banquet", "TBC"], ["Theatre", "TBC"], ["Cocktail", "TBC"], ["Area", "TBC"]],
+      caps: [["Banquet", "160"], ["Theatre", "220"], ["Cocktail", "200"], ["Area", "260"]],
       capsConfirmed: false,
       connected: ["Observatory Pre-Function"],
       tags: { business: "Conferences · Gala Dinners · Premium Events", celebrations: "Premium Celebrations · Anniversaries", weddings: "Waterfront Receptions" }
@@ -80,7 +80,7 @@
       img: "assets/img/space-lyra.jpg",
       alt: "Artist impression of the Lyra pre-function space",
       desc: "Named after the Lyra constellation — an elegant pre-function space designed as the heart of arrival and connection.",
-      caps: [["Banquet", "TBC"], ["Theatre", "TBC"], ["Cocktail", "TBC"], ["Area", "TBC"]],
+      caps: [["Banquet", "60"], ["Theatre", "90"], ["Cocktail", "180"], ["Area", "240"]],
       capsConfirmed: false,
       connected: ["Horizon", "Lume"],
       tags: { business: "Arrival · Networking · Receptions", celebrations: "Arrival Drinks · Receptions", weddings: "Guest Arrival · Canapés" }
@@ -166,7 +166,7 @@
             <span class="view-link">View Space Details</span>
             <span class="enquire-link" data-enquire="${key}" role="link" tabindex="0">Enquire →</span>
           </span>
-          <span class="space-card__note">${s.capsConfirmed ? "Capacity shown for confirmed configurations" : "Capacity & area — to be confirmed"}</span>
+          <span class="space-card__note">${s.capsConfirmed ? "Capacity shown for confirmed configurations" : "Indicative capacities — to be confirmed"}</span>
         </span>
         <span class="space-card__detail" id="detail-${key}">
           <span class="cap-grid">${capRows(s)}</span>
