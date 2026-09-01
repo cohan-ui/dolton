@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doltone House Harbourside — A new landmark waterfront venue, Darling Harbour</title>
+<meta name="description" content="A new landmark waterfront destination for business events, celebrations and weddings, at the centre of Darling Harbour. Opening 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=Archivo+Narrow:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="header-left">
+    <button class="menu-toggle" aria-label="Open menu">
+      <span class="lines"><span></span><span></span></span>
+      <span class="txt">Menu</span>
+    </button>
+    <button class="venue-select">Select venue ▾</button>
+  </div>
+  <a class="header-logo" href="#" aria-label="Doltone House — home">
+    <img src="assets/img/doltone-logo.png" alt="Doltone House">
+  </a>
+  <div class="header-right">
+    <a class="header-cta" href="#enquire">Book or Enquire</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero__media">
+    <img id="heroImg" class="kenburns" src="assets/img/hero.jpg" alt="Aerial view of the Harbourside precinct on the Darling Harbour waterfront at dusk" fetchpriority="high">
+  </div>
+  <div class="hero__scrim"></div>
+  <div class="hero__inner">
+    <p class="hero__eyebrow" data-hero="eyebrow"><span class="rule"></span><span>Darling Harbour · Opening 2027</span></p>
+    <h1 data-hero="title">Harbourside</h1>
+    <p class="hero__lede" data-hero="lede">A new landmark waterfront destination for business events, celebrations and weddings, at the centre of Darling Harbour.</p>
+    <div class="hero__actions" data-hero="actions">
+      <a class="btn btn--gold" href="#enquire">Enquire Now</a>
+      <a class="btn btn--ghost" href="#spaces">Explore the Spaces ↓</a>
+    </div>
+  </div>
+  <button class="hero__video-ctl" id="heroPause" aria-pressed="false">
+    <span class="pill" aria-hidden="true">❙❙</span>
+    <span class="lbl">Pause video</span>
+  </button>
+</section>
+
+<!-- ================= ANCHOR NAV ================= -->
+<nav class="subnav" id="subnav" aria-label="Page sections">
+  <div class="subnav__links" id="subnavLinks">
+    <a href="#overview" class="is-active">Overview</a>
+    <a href="#spaces">Spaces</a>
+    <a href="#experience">Experience</a>
+    <a href="#planning">Planning</a>
+    <a href="#enquire">Enquire</a>
+  </div>
+  <div class="subnav__context">
+    <span class="label">Planning:</span>
+    <div class="seg" id="eventTypeSeg" role="group" aria-label="Event type">
+      <button class="is-active" data-event-type="business" aria-pressed="true">Business Events</button>
+      <button data-event-type="celebrations" aria-pressed="false">Celebrations</button>
+      <button data-event-type="weddings" aria-pressed="false">Weddings</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= OVERVIEW / VENUE ================= -->
+<section class="venue section" id="overview">
+  <div>
+    <p class="overline" data-reveal>The Venue</p>
+    <h2 data-split>Where the water meets the city, a new stage for Sydney&rsquo;s most considered events.</h2>
+    <p data-reveal>Positioned on the waterfront at the centre of Darling Harbour&rsquo;s convention and tourism precinct, Harbourside brings together six purpose-built spaces, a landscaped rooftop garden and more than 55 years of Doltone House event delivery.</p>
+  </div>
+  <ul class="stats" data-reveal-group>
+    <li class="stat">
+      <span class="stat__num">4,500<sub>sqm</sub></span>
+      <span class="stat__label">of flexible event space</span>
+    </li>
+    <li class="stat">
+      <span class="stat__num">1,250</span>
+      <span class="stat__label">guests, subject to confirmed event configuration</span>
+    </li>
+    <li class="stat">
+      <span class="stat__num">3,500<sub>sqm</sub></span>
+      <span class="stat__label">landscaped rooftop garden — Eloura Park</span>
+    </li>
+    <li class="stat">
+      <span class="stat__num">6</span>
+      <span class="stat__label">event, pre-function and breakout spaces with green room and production facilities</span>
+    </li>
+    <li class="stat">
+      <span class="stat__num">2027</span>
+      <span class="stat__label">opening on the Darling Harbour waterfront</span>
+    </li>
+  </ul>
+</section>
+
+<!-- ================= SPACES ================= -->
+<section class="spaces section" id="spaces">
+  <div class="spaces__head">
+    <div>
+      <p class="overline overline--light" data-reveal>Explore the Spaces</p>
+      <h2 data-split>Six spaces, one waterfront address.</h2>
+    </div>
+    <p data-reveal>Every space can be explored, compared and enquired about here — no need to leave the page. Capacities are shown once configurations are confirmed.</p>
+  </div>
+
+  <!-- detail panel (desktop) -->
+  <div class="space-panel reveal-img" id="spacePanel" aria-live="polite">
+    <div class="space-panel__media">
+      <img id="panelImg" class="panel-fade" src="assets/img/space-horizon.jpg" alt="Artist impression of the Horizon event space">
+      <span class="artist-tag">Artist Impression</span>
+    </div>
+    <div class="space-panel__body panel-fade" id="panelBody">
+      <div class="space-panel__top">
+        <div>
+          <p class="space-panel__eyebrow" id="panelEyebrow">01 · Flagship Space</p>
+          <h3 id="panelTitle">Horizon</h3>
+        </div>
+        <button class="space-panel__reset" id="panelReset" aria-label="Reset to Horizon">✕</button>
+      </div>
+      <p class="space-panel__desc" id="panelDesc"></p>
+      <div class="cap-grid" id="panelCaps"></div>
+      <div class="connected">
+        <span class="k">Connected Spaces</span>
+        <div class="chips" id="panelChips"></div>
+      </div>
+      <div class="space-panel__actions">
+        <button class="space-panel__enquire" id="panelEnquire" data-space="horizon">Enquire About Horizon</button>
+        <a class="space-panel__floorplans" href="#" id="panelFloorplans">Download Floorplans ↓</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- selector card grid -->
+  <div class="space-grid" id="spaceGrid"><!-- cards injected --></div>
+</section>
+
+<!-- ================= ARCHITECTURE ================= -->
+<section class="architecture section" id="experience">
+  <div class="col-a">
+    <p class="overline" data-reveal>The Architecture</p>
+    <h2 data-split>Shaped by the meeting of water, sky and landscape.</h2>
+    <p data-reveal>From the waterfront promenade, arrival flows through layered sandstone and timber interiors toward the sculptural staircase, pre-function spaces and rooftop garden — a continuous journey from harbour to skyline.</p>
+    <figure class="arch-material" data-reveal>
+      <div class="frame reveal-img"><img class="lazy-img" src="assets/img/material-study.jpg" alt="Sandstone and timber material detail in the arrival interiors" loading="lazy" decoding="async"></div>
+      <figcaption>Material Study — Sandstone, Timber, Ambient Light</figcaption>
+    </figure>
+  </div>
+  <div class="col-b">
+    <div class="arch-stack arch-stack--lobby reveal-img" data-parallax="0.08">
+      <img class="lazy-img" src="assets/img/arch-precinct.jpg" alt="Aerial view of the Harbourside towers and podium" loading="lazy" decoding="async">
+    </div>
+    <blockquote data-split>&ldquo;Architecture establishes the canvas. The golden moments belong to the people in the room.&rdquo;</blockquote>
+    <div class="arch-stack arch-stack--detail reveal-img" data-parallax="0.12">
+      <img class="lazy-img" src="assets/img/arch-waterfront.jpg" alt="The Harbourside waterfront edge and public promenade" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUSINESS CENTRE ================= -->
+<section class="business section">
+  <div class="business__inner">
+    <div>
+      <p class="overline" data-reveal>Business Centre</p>
+      <h2 data-split>One venue, configured around your program.</h2>
+      <ul class="biz-list" data-reveal-group>
+        <li><span class="n">01</span><span class="t">Independent or connected space use across all six spaces</span></li>
+        <li><span class="n">02</span><span class="t">Conferences, seminars, executive meetings and workshops</span></li>
+        <li><span class="n">03</span><span class="t">Operable walls and adaptable staging</span></li>
+        <li><span class="n">04</span><span class="t">Audio-visual, lighting, production and rigging support</span></li>
+        <li><span class="n">05</span><span class="t">Breakout spaces, green rooms and delegate arrival</span></li>
+      </ul>
+    </div>
+    <div class="business__media reveal-img" data-parallax="0.09">
+      <img class="lazy-img" src="assets/img/business-centre.jpg" alt="Meeting and breakout environments along the pre-function gallery" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOLTONE DIFFERENCE ================= -->
+<section class="difference section">
+  <div class="difference__head">
+    <p class="overline" data-reveal>The Doltone Difference</p>
+    <h2 data-split>More than a room on the water — 55 years of knowing exactly how an event should feel.</h2>
+  </div>
+  <div class="difference__grid">
+    <div class="difference__media reveal-img" data-parallax="0.07">
+      <img class="lazy-img" src="assets/img/difference-event.jpg" alt="A large-scale gala event in full production" loading="lazy" decoding="async">
+    </div>
+    <ul class="diff-list" data-reveal-group>
+      <li><span class="t">Legacy</span><span class="d">Established in 1969 — more than 55 years of event and hospitality delivery across Sydney.</span></li>
+      <li><span class="t">Precision</span><span class="d">Exacting planning and attentive service, from first enquiry to the last guest&rsquo;s departure.</span></li>
+      <li><span class="t">Creativity</span><span class="d">Tailored event design with a problem-solving mentality that encourages the new and refined.</span></li>
+      <li><span class="t">Cuisine</span><span class="d">Experienced culinary teams and award-winning catering, prepared in purpose-built kitchens.</span></li>
+      <li><span class="t">Production</span><span class="d">In-house production capability and the operational confidence of thousands of delivered events.</span></li>
+    </ul>
+  </div>
+  <div class="difference__mark" data-reveal>
+    <img src="assets/img/doltone-fleur.png" alt="" aria-hidden="true">
+    <img src="assets/img/doltone-fleur.png" alt="" aria-hidden="true">
+  </div>
+</section>
+
+<!-- ================= LENS ================= -->
+<section class="lens section" id="lensSection">
+  <div class="lens__head">
+    <div>
+      <p class="overline" data-reveal>Your Event at Harbourside</p>
+      <h2 id="lensTitle" data-split>Seen through the lens of business events.</h2>
+    </div>
+  </div>
+  <div class="lens__cards" id="lensCards" data-reveal-group>
+    <article class="lens-card">
+      <div class="lens-card__media"><img class="lazy-img" data-lens-img src="assets/img/lens-conference.jpg" alt="" loading="lazy" decoding="async"></div>
+      <h3 data-lens-title>Conferences &amp; keynotes</h3>
+      <p data-lens-desc>Plenary in Horizon, breakouts across Sol and Cove, delegate arrival through Lyra.</p>
+    </article>
+    <article class="lens-card">
+      <div class="lens-card__media"><img class="lazy-img" data-lens-img src="assets/img/lens-gala.jpg" alt="" loading="lazy" decoding="async"></div>
+      <h3 data-lens-title>Gala dinners &amp; awards</h3>
+      <p data-lens-desc>Evening arrivals over the water, pre-dinner drinks in Lyra, dinner beneath Horizon&rsquo;s full scale.</p>
+    </article>
+    <article class="lens-card">
+      <div class="lens-card__media"><img class="lazy-img" data-lens-img src="assets/img/lens-exhibition.jpg" alt="" loading="lazy" decoding="async"></div>
+      <h3 data-lens-title>Exhibitions &amp; launches</h3>
+      <p data-lens-desc>Flexible floorplates, production access and networking that spills onto the rooftop garden.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ================= FULL EXPERIENCE GALLERY ================= -->
+<section class="experience-gallery section">
+  <div class="experience-gallery__head">
+    <h2 data-split>The full experience</h2>
+    <div class="gal-nav" data-reveal>
+      <span class="counter" id="galCounter">01 — 06</span>
+      <div class="arrows">
+        <button id="galPrev" aria-label="Previous image">←</button>
+        <button id="galNext" class="is-primary" aria-label="Next image">→</button>
+      </div>
+    </div>
+  </div>
+  <div class="gal-viewport">
+    <div class="gal-track" id="galTrack">
+      <div class="gal-item gal-item--wide reveal-img"><img class="lazy-img" src="assets/img/gallery-arrival.jpg" alt="Arrival forecourt at dusk" loading="lazy" decoding="async"></div>
+      <div class="gal-item gal-item--tall gal-item--dim reveal-img"><img class="lazy-img" src="assets/img/gallery-launch.jpg" alt="Product launch event in Lume" loading="lazy" decoding="async"></div>
+      <div class="gal-item gal-item--tall gal-item--dim reveal-img"><img class="lazy-img" src="assets/img/gallery-cuisine.jpg" alt="Plated fine dining course" loading="lazy" decoding="async"></div>
+      <div class="gal-item gal-item--tall gal-item--dim reveal-img"><img class="lazy-img" src="assets/img/space-azure.jpg" alt="Azure dining room with harbour outlook" loading="lazy" decoding="async"></div>
+      <div class="gal-item gal-item--tall gal-item--dim reveal-img"><img class="lazy-img" src="assets/img/space-lyra.jpg" alt="Lyra pre-function space" loading="lazy" decoding="async"></div>
+      <div class="gal-item gal-item--tall gal-item--dim reveal-img"><img class="lazy-img" src="assets/img/lens-exhibition.jpg" alt="Eloura Park rooftop garden" loading="lazy" decoding="async"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLANNING + FAQ ================= -->
+<section class="planning section" id="planning">
+  <div class="planning__grid">
+    <div>
+      <p class="overline overline--light" data-reveal>Planning</p>
+      <h2 data-split>Getting here is part of the arrival.</h2>
+      <div class="planning__map reveal-img"><img class="lazy-img" src="assets/img/map.jpg" alt="Aerial map of the Darling Harbour precinct showing the Harbourside location" loading="lazy" decoding="async"></div>
+      <ul class="transport" data-reveal-group>
+        <li><span class="k">On Foot</span><span class="d">Waterfront promenade and Pyrmont Bridge connect directly to the venue entrance.</span></li>
+        <li><span class="k">Public Transport</span><span class="d">Light rail, ferry and train connections across the Darling Harbour precinct. Future Pyrmont Metro station — opening timeframe to be confirmed.</span></li>
+        <li><span class="k">Parking</span><span class="d">Parking and drop-off information to be confirmed.</span></li>
+        <li><span class="k">Accessibility</span><span class="d">Purpose-built accessible arrival and circulation. Detailed accessibility information to be confirmed.</span></li>
+      </ul>
+    </div>
+    <div>
+      <p class="overline overline--light" data-reveal>Questions</p>
+      <h2 data-split>Frequently asked</h2>
+      <div class="faq" id="faq" data-reveal>
+        <div class="faq-item is-open">
+          <button aria-expanded="true"><span>Can spaces be booked individually or combined?</span><span class="sign" aria-hidden="true">−</span></button>
+          <div class="answer" style="height:auto"><p>Spaces can be used independently or connected. Your event configuration is confirmed with our events team as part of the enquiry process.</p></div>
+        </div>
+        <div class="faq-item">
+          <button aria-expanded="false"><span>When does Harbourside open?</span><span class="sign" aria-hidden="true">+</span></button>
+          <div class="answer"><p>Harbourside is scheduled to open on the Darling Harbour waterfront in 2027. Enquiries and pre-opening bookings are open now.</p></div>
+        </div>
+        <div class="faq-item">
+          <button aria-expanded="false"><span>Can I hold a date before opening?</span><span class="sign" aria-hidden="true">+</span></button>
+          <div class="answer"><p>Yes — our events team can pencil dates ahead of opening and confirm your configuration as details are finalised.</p></div>
+        </div>
+        <div class="faq-item">
+          <button aria-expanded="false"><span>Where can guests stay nearby?</span><span class="sign" aria-hidden="true">+</span></button>
+          <div class="answer"><p>Harbourside sits within Darling Harbour&rsquo;s hotel precinct, with a wide range of accommodation within walking distance of the venue.</p></div>
+        </div>
+      </div>
+      <div class="downloads" data-reveal>
+        <div>
+          <span class="k">Downloads</span>
+          <span class="t">Floorplans &amp; venue information</span>
+        </div>
+        <a href="#">Download Pack ↓</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ENQUIRE ================= -->
+<section class="enquire section" id="enquire">
+  <div class="enquire__grid">
+    <div>
+      <p class="overline" data-reveal>Book or Enquire</p>
+      <h2 data-split>Plan your event at Harbourside.</h2>
+      <p class="enquire__lede" data-reveal>Tell us about your event and our team will come back to you with availability, options and a considered recommendation.</p>
+      <div class="enquire__actions" data-reveal>
+        <a class="btn btn--gold" href="#enquire">Enquire Now</a>
+        <a class="btn btn--ghost" href="#">Book a Venue Tour</a>
+      </div>
+    </div>
+    <form class="enquiry-form" data-reveal onsubmit="return false;">
+      <div class="form-step">
+        <span>Step 1 of 3 — Your Event</span>
+        <span class="dashes" aria-hidden="true"><span class="on"></span><span></span><span></span></span>
+      </div>
+      <div class="field">
+        <span class="k">Event Type</span>
+        <div class="chip-row" id="formEventType">
+          <button type="button" class="is-active" data-event-type="business" aria-pressed="true">Business Event</button>
+          <button type="button" data-event-type="celebrations" aria-pressed="false">Celebration</button>
+          <button type="button" data-event-type="weddings" aria-pressed="false">Wedding</button>
+        </div>
+      </div>
+      <div class="field">
+        <span class="k">Space of Interest</span>
+        <div class="space-select" id="spaceSelect">
+          <button type="button" aria-haspopup="listbox" aria-expanded="false">
+            <span><span class="val" id="spaceSelectVal">Horizon</span><span class="hint" id="spaceSelectHint">— carried from your selection</span></span>
+            <span class="caret" aria-hidden="true">▾</span>
+          </button>
+          <div class="space-select__menu" role="listbox" id="spaceSelectMenu"></div>
+        </div>
+      </div>
+      <div class="field field-pair">
+        <div>
+          <span class="k">Guests</span>
+          <input type="text" inputmode="numeric" placeholder="e.g. 450" aria-label="Number of guests">
+        </div>
+        <div>
+          <span class="k">Preferred Timing</span>
+          <input type="text" placeholder="Flexible" aria-label="Preferred timing">
+        </div>
+      </div>
+      <div class="form-foot">
+        <p class="help">Need help choosing a space? <a href="#">Let our team recommend</a></p>
+        <button type="submit" class="continue">Continue →</button>
+      </div>
+      <p class="form-note">After you submit, a Doltone House event specialist will be in touch to discuss your event and confirm details.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div>
+    <span class="k">Also on the Water</span>
+    <p class="venues">Doltone House Jones Bay Wharf · Doltone House Darling Island</p>
+  </div>
+  <div class="mark"><img src="assets/img/doltone-logo.png" alt="Doltone House" loading="lazy"></div>
+  <p class="tagline">Events · Venues · Catering — doltonehouse.com.au</p>
+</footer>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/SplitText.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
