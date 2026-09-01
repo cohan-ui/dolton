@@ -122,7 +122,7 @@
     weddings: {
       heroImg: "assets/img/hero-weddings.jpg",
       heroAlt: "A couple walking the flower-lined waterfront promenade at golden hour, guests celebrating behind them",
-      heroLede: "A waterfront setting for a wedding shaped entirely around the two of you.",
+      heroLede: "A landmark wedding venue on the Darling Harbour waterfront \\u2014 yours from first arrival to last dance.",
       heroCta: "Plan Your Wedding",
       overviewHead: "A day of your own, on the water.",
       overviewIntro: "Opening in 2027 on the Darling Harbour waterfront, Harbourside pairs a landmark setting with more than 55 years of Doltone House wedding experience. From first arrival to last dance, every detail is planned with you \u2014 the setting, the styling, the food and the flow of the day.",
