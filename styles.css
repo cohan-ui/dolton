@@ -995,8 +995,6 @@ a:focus-visible, button:focus-visible {
     padding: 22px 20px 24px;
     height: auto;
     justify-content: center;
-    background: var(--cream-2);
-    border-block: 1px solid var(--light-line, #dcd5c4);
   }
   .subnav__links { display: none; }
   .subnav__context { flex-direction: column; align-items: center; gap: 14px; width: 100%; }
@@ -1004,11 +1002,10 @@ a:focus-visible, button:focus-visible {
   .subnav__question {
     display: block;
     font-size: 12px; letter-spacing: 2.2px; text-transform: uppercase;
-    color: var(--muted-2);
+    color: var(--muted-3);
   }
-  .subnav .seg { width: 100%; max-width: 420px; border-color: var(--light-line, #dcd5c4); background: #fff; }
-  .subnav .seg button { flex: 1 1 0; justify-content: center; text-align: center; color: var(--light-body, #6e675b); }
-  .subnav .seg button.is-active { background: var(--ink); color: var(--cream); }
+  .subnav .seg { width: 100%; max-width: 420px; }
+  .subnav .seg button { flex: 1 1 0; text-align: center; }
   .subnav .seg .lbl-x { display: none; }
 
   .venue { padding-block: 72px; }
