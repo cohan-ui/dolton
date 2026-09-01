@@ -506,7 +506,7 @@
   let galIndex = 0;
 
   function galTo(i) {
-    galIndex = Math.max(0, Math.min(i, items.length - 1));
+    galIndex = (i + items.length) % items.length;
     const x = items.slice(0, galIndex).reduce((acc, el) => acc + el.getBoundingClientRect().width + 20, 0);
     track.style.transform = `translateX(${-x}px)`;
     counter.textContent = String(galIndex + 1).padStart(2, "0") + " — " + String(items.length).padStart(2, "0");
