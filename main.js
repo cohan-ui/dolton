@@ -102,6 +102,8 @@
      weddings & celebrations carry the supplied copy deck. */
   const VARIANTS = {
     business: {
+      heroImg: "assets/img/hero.jpg",
+      heroAlt: "Aerial view of the Harbourside precinct on the Darling Harbour waterfront at dusk",
       heroLede: "A new landmark waterfront destination for business events, celebrations and weddings, at the centre of Darling Harbour.",
       heroCta: "Enquire Now",
       overviewHead: "Where the water meets the city, a new stage for Sydney\u2019s most considered events.",
@@ -118,6 +120,8 @@
       enquireCta2: "Book a Venue Tour"
     },
     weddings: {
+      heroImg: "assets/img/hero-weddings.jpg",
+      heroAlt: "A couple walking the flower-lined waterfront promenade at golden hour, guests celebrating behind them",
       heroLede: "A waterfront setting for a wedding shaped entirely around the two of you.",
       heroCta: "Plan Your Wedding",
       overviewHead: "A day of your own, on the water.",
@@ -134,6 +138,8 @@
       enquireCta2: "Book a Venue Tour"
     },
     celebrations: {
+      heroImg: "assets/img/hero.jpg",
+      heroAlt: "Aerial view of the Harbourside precinct on the Darling Harbour waterfront at dusk",
       heroLede: "A waterfront venue for birthdays, engagements and the milestones in between.",
       heroCta: "Plan Your Celebration",
       overviewHead: "Occasions worth gathering for.",
@@ -414,8 +420,15 @@
     currentEventType = type;
     markEventTypeUI(type);
     const V = VARIANTS[type];
+    const heroEl = document.getElementById("heroImg");
+    const heroChanging = heroEl.dataset.variantSrc !== V.heroImg;
 
     const apply = () => {
+      if (heroChanging) {
+        heroEl.src = V.heroImg;
+        heroEl.alt = V.heroAlt;
+        heroEl.dataset.variantSrc = V.heroImg;
+      }
       variantEls.heroLede.textContent = V.heroLede;
       variantEls.heroCta.textContent = V.heroCta;
       variantEls.overviewHead.textContent = V.overviewHead;
@@ -437,6 +450,7 @@
     };
 
     const swapNodes = [
+      ...(heroChanging ? [heroEl] : []),
       variantEls.heroLede, variantEls.heroCta,
       variantEls.overviewHead, variantEls.overviewIntro,
       lensTitle, lensCards,
@@ -742,6 +756,7 @@
     syncFormSpace();
   }
 
+  document.getElementById("heroImg").dataset.variantSrc = VARIANTS[currentEventType].heroImg;
   markEventTypeUI(currentEventType);
   initMotion();
 })();
