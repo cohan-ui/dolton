@@ -742,12 +742,11 @@ a:focus-visible, button:focus-visible {
 .gal-viewport { overflow: hidden; padding-left: var(--pad-x); }
 .gal-track { display: flex; gap: 20px; will-change: transform; transition: transform .8s var(--ease-out); }
 @media (prefers-reduced-motion: reduce) { .gal-track { transition: none; } }
-.gal-item { flex: 0 0 auto; height: clamp(320px, 33.3vw, 480px); overflow: hidden; }
+.gal-item { flex: 0 0 auto; height: clamp(320px, 33.3vw, 480px); overflow: hidden; opacity: .6; transition: opacity .45s var(--ease-out); }
 .gal-item img { height: 100%; width: auto; object-fit: cover; }
 .gal-item--wide img { width: clamp(480px, 52.7vw, 760px); }
 .gal-item--tall img { width: clamp(280px, 29vw, 420px); }
-.gal-item--dim { opacity: .6; transition: opacity .6s var(--ease-out); }
-.gal-item--dim.is-front { opacity: 1; }
+.gal-item.is-front, .gal-item:hover { opacity: 1; }
 
 /* ============================================================
    PLANNING + FAQ (light)
